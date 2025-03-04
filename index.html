@@ -10,49 +10,69 @@
     <script src="https://kit.fontawesome.com/687c8aeb98.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="p-3 flex justify-between bg-white items-center sticky top-0 shadow-lg z-50">
-        <a href="#" id="brand" class="flex items-center gap-2">
-            <img src="./assets/logo-1-02.png" class="h-10 w-auto" alt="logo">
-        </a>
-        <div id="navbar" class="gap-6 hidden lg:flex">
-            <a class="hover:text-[#3955E5] font-poppins font-medium" href="#">Home</a>
-            <a class="hover:text-[#3955E5] font-poppins font-medium" href="#">Property Listing</a>
-            <a class="hover:text-[#3955E5] font-poppins font-medium" href="#">Contact Us</a>
-        </div>
-        <button class="hidden lg:flex items-center gap-2 border border-gray-300 hover:border-gray-500 px-6 py-2 rounded-lg">
-            <i class="fa-solid fa-right-to-bracket text-[#3955E5]"></i>
-                <span>Login</span>
-        </button>
-
-        <button id="nav_handler" onclick="navHandler()" class="lg:hidden">
-            <i class="fa-solid fa-bars text-gray-600 text-3xl"></i>
-        </button>
-        <div id="navDiolog" class="hidden fixed z-10 lg:hidden inset-0 p-3 bg-white">
-            <div id="nav-bar" class="flex justify-between items-center ">
-                <a href="#" id="brand" class="flex items-center gap-2">
-                    <img src="./assets/logo-1-02.png" class="h-10 w-auto" alt="logo">
-                </a>
-                <button id="nav_handler" onclick="navHandler()" class="lg:hidden">
-                    <i class="fa-solid fa-xmark text-gray-600 text-3xl"></i>
-                </button>
-                
+    <header>
+        <nav class="p-3 flex justify-between bg-white items-center sticky top-0 shadow-lg z-50">
+            <a href="#" id="brand" class="flex items-center gap-2">
+                <img src="./assets/logo-1-02.png" class="h-10 w-auto" alt="logo">
+            </a>
+            <div id="navbar" class="gap-6 hidden lg:flex">
+                <a class="hover:text-[#3955E5] font-poppins font-medium" href="#">Home</a>
+                <a class="hover:text-[#3955E5] font-poppins font-medium" href="#">Property Listing</a>
+                <a class="hover:text-[#3955E5] font-poppins font-medium" href="#">Contact Us</a>
             </div>
-            <div class="mt-6">
-                <a onclick="menu_item()" class="block font-medium p-3 mt-3 hover:bg-gray-50 rounded-lg" href="#hero">Home</a>
-                <a onclick="menu_item()" class="block font-medium p-3 mt-3 hover:bg-gray-50 rounded-lg" href="#about">property Listing</a>
-                <a onclick="menu_item()" class="block font-medium p-3 mt-3 hover:bg-gray-50 rounded-lg" href="#contact">Contact Us</a>
-            </div>
-            <div class="h-[1px] bg-gray-300"></div>
-            <button class="w-full flex mt-6 items-center gap-2  hover:bg-gray-50 px-6 py-2 rounded-lg">
+            <button class="hidden lg:flex items-center gap-2 border border-gray-300 hover:border-gray-500 px-6 py-2 rounded-lg">
                 <i class="fa-solid fa-right-to-bracket text-[#3955E5]"></i>
-                <span>Login</span>
+                    <span>Login</span>
             </button>
+
+            <button id="nav_handler" onclick="navHandler()" class="lg:hidden">
+                <i class="fa-solid fa-bars text-gray-600 text-3xl"></i>
+            </button>
+            <div id="navDiolog" class="hidden fixed z-10 lg:hidden inset-0 p-3 bg-white">
+                <div id="nav-bar" class="flex justify-between items-center ">
+                    <a href="#" id="brand" class="flex items-center gap-2">
+                        <img src="./assets/logo-1-02.png" class="h-10 w-auto" alt="logo">
+                    </a>
+                    <button id="nav_handler" onclick="navHandler()" class="lg:hidden">
+                        <i class="fa-solid fa-xmark text-gray-600 text-3xl"></i>
+                    </button>
+                    
+                </div>
+                <div class="mt-6">
+                    <a onclick="menu_item()" class="block font-medium p-3 mt-3 hover:bg-gray-50 rounded-lg" href="#hero">Home</a>
+                    <a onclick="menu_item()" class="block font-medium p-3 mt-3 hover:bg-gray-50 rounded-lg" href="#about">property Listing</a>
+                    <a onclick="menu_item()" class="block font-medium p-3 mt-3 hover:bg-gray-50 rounded-lg" href="#contact">Contact Us</a>
+                </div>
+                <div class="h-[1px] bg-gray-300"></div>
+                <button class="w-full flex mt-6 items-center gap-2  hover:bg-gray-50 px-6 py-2 rounded-lg">
+                    <i class="fa-solid fa-right-to-bracket text-[#3955E5]"></i>
+                    <span>Login</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+    </main>
+    <footer class="bg-[#3955E5] text-white mt-20 absolute w-full bottom-0">
+        <div class="max-w-6xl py-6 mx-auto flex flex-col md:flex-row justify-between items-center space-y-4">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <a href="#" id="brand" class="flex items-center md:items-start gap-2">
+                    <img src="./assets/footer-logo-02.png" class="h-10 w-auto" alt="logo">
+                </a>
+                <p class="text-sm text-center md:text-left">Your trusted partner in finding the perfect property.</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-[#222123]"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-[#222123]"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-[#222123]"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#222123]"><i class="fab fa-linkedin-in"></i></a>
+            </div>
         </div>
-    </nav>
-
-
-
-
+        <div class="w-full bg-[#2f46bb] opacity-90 text-center py-3">
+            <p class="text-sm">&copy; 2025 Real State. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="./main.js"></script>
 </body>
 </html>
