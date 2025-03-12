@@ -628,9 +628,6 @@
     --tw-duration: 500ms;
     transition-duration: 500ms;
   }
-  .\[a\:Or�\] {
-    a: Or�;
-  }
   .hover\:border-gray-500 {
     &:hover {
       @media (hover: hover) {
