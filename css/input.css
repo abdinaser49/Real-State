@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-    --primary: #3238f2,
-    --secendary: #6b7280,
-},
-      /* fontFamily:{
-        sans:["poppins"]
-      },
-    },
-} */
+html {
+  scroll-behavior: smooth;
+}
