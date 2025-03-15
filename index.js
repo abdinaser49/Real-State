@@ -21,7 +21,9 @@ const buildTheDom = (houses) => {
                 <p class="text-gray-600 mt-2">${house.description}</p>
                 <div class="mt-4 flex items-center justify-between">
                     <span class="text-xl font-bold text-[#3955E5]">$${house.price}</span>
-                    <a href="#" class="text-white bg-[#3955E5] hover:bg-[#2f46bb] px-4 py-2 rounded-lg">View Details</a>
+                    <button class="text-white bg-[#3955E5] hover:bg-[#2f46bb] px-4 py-2 rounded-lg" onclick="Details('${house.title}', '${house.address}', '${house.description}', '${house.price}', '${house.type}', '${house.bedrooms}', '${house.bathrooms}', '${house.image}')">
+                        <a href="#" >View Details</a>
+                    </button>
                 </div>
             </div>
         </div>`;
@@ -47,4 +49,17 @@ try {
     fetchData();
 } catch (error) {
     console.log(error);
+}
+
+const Details = (title, address, description, price, type, bedrooms, bathrooms, image) => {
+    sessionStorage.setItem('title', title);
+    sessionStorage.setItem('address', address);
+    sessionStorage.setItem('description', description);
+    sessionStorage.setItem('price', price);
+    sessionStorage.setItem('type', type);
+    sessionStorage.setItem('bedrooms', bedrooms);
+    sessionStorage.setItem('bathrooms', bathrooms);
+    sessionStorage.setItem('image', image);
+
+    window.location.href = "details.html";
 }

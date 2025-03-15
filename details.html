@@ -50,5 +50,69 @@
             </div>
         </nav>
     </header>
+    <div class="max-w-6xl mx-auto">
+        <button class="mt-6 flex items-center gap-2 px-6 py-2 bg-[#3955E5] text-white rounded-md" onclick="goBack()">
+            <i class="fa-solid fa-arrow-left" ></i>
+            Go back
+        </button>
+        <div class="flex gap-4 mt-6">
+            <div class="w-1/2">
+                <div class="w-[90%] shadow-lg shadow-gray-400">
+                    <img id="img1" src="" class="w-full" alt="property">
+                </div>
+                <div class="flex gap-2 mt-4">
+                    <img id="img2" src="" class="w-[15%] shadow-lg shadow-gray-400" alt="property">
+                </div>
+            </div>
+            
+            <div class="w-1/2">
+                <h1 id="propertyName" class="text-2xl font-bold"></h1>
+                <p id="propertyDesc" class="text-gray-500"></p>
+                <p id="propertyAddress" class="text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i></p>
+                <div class="flex items-center gap-2 mt-4">
+                    <i class="fa-solid fa-bed"></i>
+                    <span id="bedrooms"></span>
+                    <i class="fa-solid fa-bath"></i>
+                    <span id="bathrooms"></span>
+                    <i class="fa-solid fa-house"></i>
+                    <span id="type"></span> 
+                    <i class="fa-solid fa-money-bills"></i>
+                    <span id="price"></span> 
+                </div>
+                <button class="mt-6 flex items-center gap-2 px-6 py-2 bg-[#3955E5] text-white rounded-md">
+                    Make Payment
+                    <i class="fa-solid fa-credit-card"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script>
+        const propertyName = sessionStorage.getItem('title');
+        const propertyDesc = sessionStorage.getItem('description');
+        const propertyAddress = sessionStorage.getItem('address');
+        const bedrooms = sessionStorage.getItem('bedrooms');
+        const bathrooms = sessionStorage.getItem('bathrooms');
+        const type = sessionStorage.getItem('type');
+        const image = sessionStorage.getItem('image');
+        const Price = sessionStorage.getItem('price');
+
+        const name = document.getElementById('propertyName').innerHTML = propertyName;
+        const desc = document.getElementById('propertyDesc').innerHTML = propertyDesc;
+        const address = document.getElementById('propertyAddress').innerHTML = propertyAddress;
+        const bed = document.getElementById('bedrooms').innerHTML = bedrooms;
+        const bath = document.getElementById('bathrooms').innerHTML = bathrooms;
+        const propType = document.getElementById('type').innerHTML= type;
+        const price = document.getElementById('price').innerHTML = Price;
+        const img1 = document.getElementById('img1').src = image;
+        const img2 = document.getElementById('img2').src = image;
+
+
+        const goBack = () => {
+            window.location.href = "./propertyListing.html";
+        }
+    </script>
 </body>
 </html>
