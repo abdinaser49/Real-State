@@ -50,13 +50,13 @@
             </div>
         </nav>
     </header>
-    <div class="max-w-6xl mx-auto">
-        <button class="mt-6 flex items-center gap-2 px-6 py-2 bg-[#3955E5] text-white rounded-md" onclick="goBack()">
+    <div class="max-w-sm md:max-w-6xl mx-auto">
+        <button class="mt-6 mx-4 md:mx-4 lg:mx-0 flex items-center gap-2 px-6 py-2 bg-[#3955E5] text-white rounded-md" onclick="goBack()">
             <i class="fa-solid fa-arrow-left" ></i>
             Go back
         </button>
-        <div class="flex gap-4 mt-6">
-            <div class="w-1/2">
+        <div class="flex flex-col md:flex-row mx-4 md:mx-4 lg:mx-0 gap-4 mt-6">
+            <div class="w-full md:w-1/2">
                 <div class="w-[90%] shadow-lg shadow-gray-400">
                     <img id="img1" src="" class="w-full" alt="property">
                 </div>
@@ -65,11 +65,13 @@
                 </div>
             </div>
             
-            <div class="w-1/2">
+            <div class="w-full md:w-1/2">
                 <h1 id="propertyName" class="text-2xl font-bold"></h1>
                 <p id="propertyDesc" class="text-gray-500"></p>
-                <p id="propertyAddress" class="text-gray-500">
-                    <i class="fa-solid fa-location-dot"></i></p>
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="propertyAddress" class="text-gray-500"></span>
+                
+                
                 <div class="flex items-center gap-2 mt-4">
                     <i class="fa-solid fa-bed"></i>
                     <span id="bedrooms"></span>
@@ -111,7 +113,7 @@
 
 
         const goBack = () => {
-            window.location.href = "./propertyListing.html";
+            window.history.back();
         }
     </script>
 </body>
